@@ -130,6 +130,11 @@ public class AddressBook1 {
         }
         System.out.println(num + " " + "Contacts added in the Address Book.");
     }
-}
 
+        public void viewContact () {
+            for (Contact contact : cc) {
+                System.out.println(contact);
+            }
+        }
+    }
 
