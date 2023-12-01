@@ -3,7 +3,7 @@ package com.BridgeLabz.AddressBookApp;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class AddressBook {
+public class AddressBook1 {
 
     HashSet<Contact> cc = new HashSet<>();
     Scanner sc = new Scanner(System.in);
@@ -120,55 +120,16 @@ public class AddressBook {
     }
 
 
-    public void addMultipleContacts(){
+    public void addMultipleContacts() {
         System.out.println("Enter the number of Contacts you want to add in the Address Book:");
-        int num=sc.nextInt();
+        int num = sc.nextInt();
 
-        for (int i=0;i<num;i++){
+        for (int i = 0; i < num; i++) {
             addContact();
-            System.out.println(i+1);
+            System.out.println(i + 1);
         }
-        System.out.println(num+" "+"Contacts added in the Address Book.");
-    }
-
-
-    static boolean flow=true;
-    public static void main(String[] args) {
-
-        System.out.println("Welcome to the Address Book Program");
-
-        AddressBook addressBook = new AddressBook();
-        Scanner sc = new Scanner(System.in);
-
-        do {
-            System.out.println("\n1. Add Contact Details"
-                    + "\n2. Update Contact Details."
-                    + "\n3. Delete Contact Details."
-                    + "\n4. Add Multiple Contact Details.");
-
-            System.out.println("Enter the choice:");
-            int option = sc.nextInt();
-            switch (option) {
-                case 1:
-                    System.out.println("Add Contacts:");
-                    addressBook.addContact();
-                    break;
-
-                case 2:
-                    System.out.println("Update Contacts:");
-                    addressBook.updateContacts();
-
-                case 3:
-                    System.out.println("Delete Contacts:");
-                    addressBook.deleteContact();
-
-                case 4:
-                    System.out.println("Add Multiple Contacts:");
-                    addressBook.addMultipleContacts();
-
-
-            }
-        }while (flow) ;
+        System.out.println(num + " " + "Contacts added in the Address Book.");
     }
 }
+
 
