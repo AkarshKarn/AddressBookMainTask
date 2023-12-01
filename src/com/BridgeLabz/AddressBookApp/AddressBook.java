@@ -120,6 +120,18 @@ public class AddressBook {
     }
 
 
+    public void addMultipleContacts(){
+        System.out.println("Enter the number of Contacts you want to add in the Address Book:");
+        int num=sc.nextInt();
+
+        for (int i=0;i<num;i++){
+            addContact();
+            System.out.println(i+1);
+        }
+        System.out.println(num+" "+"Contacts added in the Address Book.");
+    }
+
+
     static boolean flow=true;
     public static void main(String[] args) {
 
@@ -131,7 +143,8 @@ public class AddressBook {
         do {
             System.out.println("\n1. Add Contact Details"
                     + "\n2. Update Contact Details."
-                    + "\n3. Delete Contact Details.");
+                    + "\n3. Delete Contact Details."
+                    + "\n4. Add Multiple Contact Details.");
 
             System.out.println("Enter the choice:");
             int option = sc.nextInt();
@@ -148,6 +161,10 @@ public class AddressBook {
                 case 3:
                     System.out.println("Delete Contacts:");
                     addressBook.deleteContact();
+
+                case 4:
+                    System.out.println("Add Multiple Contacts:");
+                    addressBook.addMultipleContacts();
 
 
             }
