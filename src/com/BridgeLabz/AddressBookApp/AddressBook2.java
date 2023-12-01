@@ -141,6 +141,24 @@ public class AddressBook2 {
         String cityState = sc.next();
         cc.stream().filter(contact -> contact.getCity().equals(cityState) || contact.getState().equals(cityState)).forEach(System.out::println);
     }
+
+
+    public void displayNumberOfContact(){
+        int count=0;
+
+        System.out.println("Enter the city or State name:");
+        String cityState=sc.next();
+        cc.stream().filter(contact -> contact.getCity().equals(cityState) || contact.getState().equals(cityState)).forEach(System.out::println);
+        count++;
+        System.out.println(count);
+    }
+
+    public void viewContactByCityOrState () {
+        System.out.println("Enter City or State:");
+        String cityState=sc.next();
+        cc.stream().filter(contact -> contact.getCity().equals(cityState) || contact.getState().equals(cityState)).forEach(System.out::println);
+
+    }
 }
 
 
