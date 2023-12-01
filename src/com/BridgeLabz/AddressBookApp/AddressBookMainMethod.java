@@ -39,7 +39,9 @@ public class AddressBookMainMethod {
                                 + "\n3. Update Contact Details."
                                 + "\n4. Delete Contact Details."
                                 + "\n5. Add Multiple Contact Details."
-                                + "\n6. Search Contact Details by City or State Name");
+                                + "\n6. Search Contact Details by City or State Name"
+                                + "\n7. Display Number of Contact in a City or State."
+                                + "\n8. View Contact Details by City or State:");
 
                         System.out.println("Enter the choice:");
                         int option = sc.nextInt();
@@ -56,25 +58,39 @@ public class AddressBookMainMethod {
                             case 2:
                                 System.out.println("View Contacts:");
                                 addressBook1.viewContact();
+                                break;
 
                             case 3:
                                 System.out.println("Update Contacts:");
                                 addressBook1.updateContacts();
+                                break;
 
                             case 4:
                                 System.out.println("Delete Contacts:");
                                 addressBook1.deleteContact();
+                                break;
 
                             case 5:
                                 System.out.println("Add Multiple Contacts:");
                                 addressBook1.addMultipleContacts();
+                                break;
 
                             case 6:
                                 System.out.println("Search Contact Details by City or State Name");
                                 addressBook1.searchContactDetails();
                                 System.out.println("Contacts Details successfully searched.");
+                                break;
 
+                            case 7:
+                                System.out.println("Display Number of Contact in a City or State.");
+                                addressBook1.displayNumberOfContact();
+                                System.out.println("Number of Contact in a City or State displayed successfully.");
+                                break;
 
+                            case 8:
+                                System.out.println("View Contact Details by City or State:");
+                                addressBook1.viewContactByCityOrState();
+                                break;
                         }
                     } while (flow);
 
@@ -88,7 +104,9 @@ public class AddressBookMainMethod {
                                 + "\n3. Update Contact Details."
                                 + "\n4. Delete Contact Details."
                                 + "\n5. Add Multiple Contact Details."
-                                + "\n6. Search Contact Details by City or State Name");
+                                + "\n6. Search Contact Details by City or State Name"
+                                + "\n7. Display Number of Contact in a City or State."
+                                + "\n8. View Contact Details by City or State:");
 
                         System.out.println("Enter the choice:");
                         int option = sc.nextInt();
@@ -106,23 +124,39 @@ public class AddressBookMainMethod {
                                 System.out.println("View Contacts:");
                                 addressBook2.viewContact();
                                 System.out.println("Successfully Displayed the Contact Details.");
+                                break;
 
                             case 3:
                                 System.out.println("Update Contacts:");
                                 addressBook2.updateContacts();
+                                break;
 
                             case 4:
                                 System.out.println("Delete Contacts:");
                                 addressBook2.deleteContact();
+                                break;
 
                             case 5:
                                 System.out.println("Add Multiple Contacts:");
                                 addressBook2.addMultipleContacts();
+                                break;
 
                             case 6:
                                 System.out.println("Search Contact Details by City or State Name");
                                 addressBook2.searchContactDetails();
                                 System.out.println("Contacts Details successfully searched.");
+                                break;
+
+                            case 7:
+                                System.out.println("Display Number of Contact in a City or State.");
+                                addressBook2.displayNumberOfContact();
+                                System.out.println("Number of Contact in a City or State displayed successfully.");
+                                break;
+
+                            case 8:
+                                System.out.println("View Contact Details by City or State:");
+                                addressBook1.viewContactByCityOrState();
+                                break;
 
                         }
                     } while (flow);
