@@ -98,16 +98,40 @@ public class AddressBook {
     }
 
 
+    public void deleteContact() {
+        boolean found = false;
+        System.out.println("Enter the first name:");
+
+        String firstName = sc.nextLine();
+
+        Contact contactDelete = null;
+        for (Contact contacts2 : cc) {
+            if (contacts2.getFirstName().equals(contacts2.firstName)) {
+                contactDelete = contacts2;
+                found = true;
+            }
+            if (!found) {
+                System.out.println("Contact details is not present in the directory");
+            } else {
+                cc.remove(contactDelete);
+                System.out.println("Contact deleted successfully");
+            }
+        }
+    }
+
+
     static boolean flow=true;
     public static void main(String[] args) {
+
+        System.out.println("Welcome to the Address Book Program");
 
         AddressBook addressBook = new AddressBook();
         Scanner sc = new Scanner(System.in);
 
         do {
-            System.out.println("Welcome to the Address Book Program"
-                    + "\n1. Add Contact Details"
-                    + "\n2. Update Contact Details.");
+            System.out.println("\n1. Add Contact Details"
+                    + "\n2. Update Contact Details."
+                    + "\n3. Delete Contact Details.");
 
             System.out.println("Enter the choice:");
             int option = sc.nextInt();
@@ -118,8 +142,12 @@ public class AddressBook {
                     break;
 
                 case 2:
-                    System.out.println("Update Contacts");
+                    System.out.println("Update Contacts:");
                     addressBook.updateContacts();
+
+                case 3:
+                    System.out.println("Delete Contacts:");
+                    addressBook.deleteContact();
 
 
             }
