@@ -38,7 +38,8 @@ public class AddressBookMainMethod {
                                 + "\n2. View Contact Details"
                                 + "\n3. Update Contact Details."
                                 + "\n4. Delete Contact Details."
-                                + "\n5. Add Multiple Contact Details.");
+                                + "\n5. Add Multiple Contact Details."
+                                + "\n6. Search Contact Details by City or State Name");
 
                         System.out.println("Enter the choice:");
                         int option = sc.nextInt();
@@ -68,6 +69,11 @@ public class AddressBookMainMethod {
                                 System.out.println("Add Multiple Contacts:");
                                 addressBook1.addMultipleContacts();
 
+                            case 6:
+                                System.out.println("Search Contact Details by City or State Name");
+                                addressBook1.searchContactDetails();
+                                System.out.println("Contacts Details successfully searched.");
+
 
                         }
                     } while (flow);
@@ -81,7 +87,8 @@ public class AddressBookMainMethod {
                                 + "\n2. View Contact Details"
                                 + "\n3. Update Contact Details."
                                 + "\n4. Delete Contact Details."
-                                + "\n5. Add Multiple Contact Details.");
+                                + "\n5. Add Multiple Contact Details."
+                                + "\n6. Search Contact Details by City or State Name");
 
                         System.out.println("Enter the choice:");
                         int option = sc.nextInt();
@@ -112,12 +119,19 @@ public class AddressBookMainMethod {
                                 System.out.println("Add Multiple Contacts:");
                                 addressBook2.addMultipleContacts();
 
+                            case 6:
+                                System.out.println("Search Contact Details by City or State Name");
+                                addressBook2.searchContactDetails();
+                                System.out.println("Contacts Details successfully searched.");
+
                         }
                     } while (flow);
-                    
+
             }
 
         }while (flow1);
+
+
 
     }
 

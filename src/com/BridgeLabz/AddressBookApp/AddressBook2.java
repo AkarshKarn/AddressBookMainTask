@@ -130,11 +130,16 @@ public class AddressBook2 {
         System.out.println(num + " " + "Contacts added in the Address Book.");
     }
 
-    public void viewContact(){
-        for (Contact contact : cc){
+    public void viewContact() {
+        for (Contact contact : cc) {
             System.out.println(contact);
         }
+    }
 
+    public void searchContactDetails() {
+        System.out.println("Enter the city or State name:");
+        String cityState = sc.next();
+        cc.stream().filter(contact -> contact.getCity().equals(cityState) || contact.getState().equals(cityState)).forEach(System.out::println);
     }
 }
 
