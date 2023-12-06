@@ -144,13 +144,13 @@ public class AddressBook2 {
 
 
     public void displayNumberOfContact(){
-        int count=0;
 
         System.out.println("Enter the city or State name:");
-        String cityState=sc.next();
-        cc.stream().filter(contact -> contact.getCity().equals(cityState) || contact.getState().equals(cityState)).forEach(System.out::println);
-        count++;
-        System.out.println(count);
+        String cityOrState=sc.next();
+
+        System.out.println("Number of Contact from the following:"+" "+cityOrState+" :");
+        System.out.println(cc.stream().filter(contact -> contact.getCity().equals(cityOrState) || contact.getState().equals(cityOrState)).count());
+
     }
 
     public void viewContactByCityOrState () {
